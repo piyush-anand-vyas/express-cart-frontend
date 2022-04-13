@@ -15,7 +15,7 @@ import {
   ORDER_PAY_RESET,
   ORDER_DELIVER_RESET,
 } from '../constants/orderConstants'
-
+axios.defaults.baseURL = "https://express-cart-backend.herokuapp.com";
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id
 

@@ -5,7 +5,7 @@ import {
   CART_SAVE_SHIPPING_ADDRESS,
   CART_SAVE_PAYMENT_METHOD,
 } from '../constants/cartConstants'
-
+axios.defaults.baseURL = "https://express-cart-backend.herokuapp.com";
 export const addToCart = (id, qty) => async (dispatch, getState) => {
   const { data } = await axios.get(`/api/products/${id}`)
 

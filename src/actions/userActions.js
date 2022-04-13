@@ -27,6 +27,8 @@ import {
 } from '../constants/userConstants'
 import { ORDER_LIST_MY_RESET } from '../constants/orderConstants'
 
+//axios.defaults.baseURL = "https://express-cart-backend.herokuapp.com";
+
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({
@@ -38,9 +40,8 @@ export const login = (email, password) => async (dispatch) => {
         'Content-Type': 'application/json',
       },
     }
-
     const { data } = await axios.post(
-      'https://express-cart-backend.herokuapp.com/api/users/login',
+      '/api/users/login',
       { email, password },
       config
     )

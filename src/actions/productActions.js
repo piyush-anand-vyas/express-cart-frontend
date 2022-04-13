@@ -23,7 +23,7 @@ import {
   PRODUCT_TOP_FAIL,
 } from '../constants/productConstants'
 import { logout } from './userActions'
-
+axios.defaults.baseURL = "https://express-cart-backend.herokuapp.com";
 export const listProducts = (keyword = '', pageNumber = '') => async (
   dispatch
 ) => {

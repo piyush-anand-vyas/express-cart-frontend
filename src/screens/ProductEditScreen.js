@@ -8,7 +8,7 @@ import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { listProductDetails, updateProduct } from '../actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
-
+axios.defaults.baseURL = "https://express-cart-backend.herokuapp.com";
 const ProductEditScreen = ({ match, history }) => {
   const productId = match.params.id
 
