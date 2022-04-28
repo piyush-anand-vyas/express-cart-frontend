@@ -32,6 +32,9 @@ const LoginScreen = ({ location, history }) => {
   return (
     <FormContainer>
       <h1>Sign In</h1>
+      <p>Admin credentials: </p>
+      <p>Email: piyush__vyas@outlook.com </p>
+      <p>Password: Piyush@123 </p> 
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
