@@ -34,7 +34,7 @@ const OrderScreen = ({ match, history }) => {
 
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
-
+  console.log(order);
   if (!loading) {
     //   Calculate prices
     const addDecimals = (num) => {
